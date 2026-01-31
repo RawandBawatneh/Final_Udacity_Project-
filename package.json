@@ -1,0 +1,49 @@
+{
+  "name": "study-night",
+  "version": "1.0.0",
+  "description": "A flashcards application for effective study sessions",
+  "type": "module",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "mocha",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "gulp": "gulp",
+    "gulp:build": "gulp build",
+    "gulp:test": "gulp test",
+    "gulp:cypress": "gulp cypress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RawandBawatneh/Final_Udacity_Project-.git"
+  },
+  "keywords": [
+    "flashcards",
+    "study",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RawandBawatneh/Final_Udacity_Project-/issues"
+  },
+  "homepage": "https://github.com/RawandBawatneh/Final_Udacity_Project-#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "chai": "^6.2.2",
+    "cypress": "^15.9.0",
+    "eslint": "^9.39.2",
+    "globals": "^17.2.0",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
+    "gulp-shell": "^0.8.0",
+    "mocha": "^11.7.5",
+    "parcel": "^2.16.3",
+    "prettier": "^3.2.5"
+  }
+}

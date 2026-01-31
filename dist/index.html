@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Night - Flashcards App</title>
+    <link rel="stylesheet" href="/Final_Udacity_Project-.4d663569.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Study Night</h1>
+      <p>Your flashcard study companion</p>
+    </header>
+
+    <main>
+      <nav class="sideMenu">
+        <ul>
+          <li>
+            <button data-cy="nav-home" class="navButton" data-page="home">Home</button>
+          </li>
+          <li>
+            <button data-cy="nav-about" class="navButton" data-page="about">About</button>
+          </li>
+          <li>
+            <button data-cy="nav-cardset" class="navButton" data-page="cardset">Card Set</button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="contentArea">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+          <div class="homeContainer">
+            <h2>Welcome to Study Night!</h2>
+            <p>Create and study flashcards to boost your learning.</p>
+            <p>Get started by creating a new card set from the Card Set page.</p>
+          </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+          <div class="aboutContainer">
+            <h2>About Study Night</h2>
+            <p>
+              Study Night is a simple flashcard application designed to help you learn and memorize
+              information effectively.
+            </p>
+            <img src="https://via.placeholder.com/300x200?text=Study+Night" alt="Study Night illustration">
+            <h3>Features</h3>
+            <ul>
+              <li>Create custom card sets</li>
+              <li>Add unlimited flashcards</li>
+              <li>Shuffle cards for better retention</li>
+              <li>Simple and intuitive interface</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Card Set Page -->
+        <section id="cardset" class="page">
+          <div class="cardsetContainer">
+            <h2>Manage Your Cards</h2>
+
+            <!-- Error Message Container -->
+            <div data-cy="error-message" class="errorMessage" role="alert"></div>
+
+            <!-- Create Set Form -->
+            <div class="formSection">
+              <h3>Create New Set</h3>
+              <form id="createSetForm" data-cy="create-set-form">
+                <div class="formGroup">
+                  <label for="setName">Set Name:</label>
+                  <input type="text" id="setName" name="setName" data-cy="set-name-input" placeholder="Enter set name...">
+                </div>
+                <button type="submit" data-cy="create-set-submit" class="submitButton">
+                  Create Set
+                </button>
+              </form>
+            </div>
+
+            <!-- Add Card Form -->
+            <div class="formSection">
+              <h3>Add New Card</h3>
+              <form id="addCardForm" data-cy="add-card-form">
+                <div class="formGroup">
+                  <label for="cardFront">Front (Question):</label>
+                  <input type="text" id="cardFront" name="cardFront" data-cy="card-front-input" placeholder="Enter question...">
+                </div>
+                <div class="formGroup">
+                  <label for="cardBack">Back (Answer):</label>
+                  <input type="text" id="cardBack" name="cardBack" data-cy="card-back-input" placeholder="Enter answer...">
+                </div>
+                <button type="submit" data-cy="add-card-submit" class="submitButton">
+                  Add Card
+                </button>
+              </form>
+            </div>
+
+            <!-- Cards Display -->
+            <div class="cardsDisplay">
+              <h3>Your Cards</h3>
+              <button data-cy="shuffle-button" id="shuffleButton" class="shuffleButton">
+                Shuffle Cards
+              </button>
+              <div data-cy="cards-container" id="cardsContainer" class="cardsContainer"></div>
+            </div>
+
+            <!-- Sets Display -->
+            <div class="setsDisplay">
+              <h3>Your Sets</h3>
+              <div data-cy="sets-container" id="setsContainer" class="setsContainer"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Study Night. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/Final_Udacity_Project-.0f77c784.js"></script>
+  
+
+</body></html>

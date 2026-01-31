@@ -1,0 +1,364 @@
+/* ========================================
+   Study Night - Flashcards App Styles
+   ======================================== */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Side Menu - OPTIMIZED SELECTORS */
+.sideMenu {
+  width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  height: fit-content;
+}
+
+.sideMenu ul {
+  list-style: none;
+}
+
+.sideMenu li {
+  margin-bottom: 0.5rem;
+}
+
+.navButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.navButton:hover {
+  background: #667eea;
+  color: white;
+}
+
+.navButton.active {
+  background: #764ba2;
+  color: white;
+}
+
+/* Content Area */
+.contentArea {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Page Sections */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Home Container - OPTIMIZED */
+.homeContainer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.homeContainer h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.homeContainer p {
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+/* About Container - OPTIMIZED */
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutContainer h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.aboutContainer p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.aboutContainer img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
+
+.aboutContainer h3 {
+  color: #764ba2;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.aboutContainer ul {
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+.aboutContainer li {
+  margin-bottom: 0.5rem;
+}
+
+/* Card Set Container - OPTIMIZED */
+.cardsetContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cardsetContainer h2 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Error Message - OPTIMIZED */
+.errorMessage {
+  background: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #dc2626;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.errorMessage.visible {
+  display: block;
+}
+
+/* Form Sections - OPTIMIZED */
+.formSection {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.formSection h3 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    transform 0.1s,
+    box-shadow 0.2s;
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Shuffle Button - OPTIMIZED */
+.shuffleButton {
+  background: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.shuffleButton:hover {
+  background: #059669;
+}
+
+/* Cards Container - OPTIMIZED */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  min-height: 100px;
+}
+
+/* Card Styles - OPTIMIZED */
+.card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card .front {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #92400e;
+}
+
+.card .back {
+  color: #78350f;
+  font-size: 0.9rem;
+}
+
+/* Sets Container - OPTIMIZED */
+.setsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Set Badge - OPTIMIZED */
+.setBadge {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Cards and Sets Display Sections */
+.cardsDisplay,
+.setsDisplay {
+  margin-top: 1.5rem;
+}
+
+.cardsDisplay h3,
+.setsDisplay h3 {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .sideMenu {
+    width: 100%;
+  }
+
+  .sideMenu ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sideMenu li {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .navButton {
+    text-align: center;
+  }
+}
